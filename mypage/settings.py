@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!n0%@uy5^nx=bhsxuib%(onhspgrsnf)6msm8tf1(pmz8xtbi#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -160,18 +160,19 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-MEDIA_ROOT=os.path.join(BASE_DIR,"static/images")
+STATICFILES_DIRS = [BASE_DIR / "/static"] # new
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 
 #SMTP Configuration 
 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT='587'
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER='wastijeet110@gmail.com'
-EMAIL_HOST_PASSWORD='xmgxmfkcnnsandtp'
+# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST='smtp.gmail.com'
+# EMAIL_PORT='587'
+# EMAIL_USE_TLS=True
+# EMAIL_HOST_USER='wastijeet110@gmail.com'
+# EMAIL_HOST_PASSWORD='xmgxmfkcnnsandtp'
 
 
 
